@@ -76,17 +76,3 @@ curl http://sf-upload-proxy:5051/health
 ```
 
 Ambos deben responder `{"status": "healthy"}`.
-
----
-
-## Actualización en n8n
-
-Una vez funcionando, cambiar en los workflows:
-
-| Antes | Después |
-|-------|---------|
-| `http://157.173.199.130:5050/extract` | `http://pdf-extractor-api:5050/extract` |
-| `http://157.173.199.130:5050/pdf/find-invoice-page` | `http://pdf-extractor-api:5050/pdf/find-invoice-page` |
-| `http://157.173.199.130:5051/upload-to-salesforce` | `http://sf-upload-proxy:5051/upload-to-salesforce` |
-
-> **Nota:** Los hostnames internos dependen de cómo se nombren los servicios en EasyPanel. Ajustar según corresponda.
